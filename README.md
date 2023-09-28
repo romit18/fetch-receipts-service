@@ -24,12 +24,12 @@ First one involves Docker. The steps are as follows:
        - In case you get stuck, navigate to https://gradle.org/install/
 4. Post the successful installation, check **./gradlew -v** to check the gradle version
 5. After this, run the following steps:
-      - `**./gradlew dockerBuild**`
-      - `**docker run fetch-receipts-service:latest**`
+      - `./gradlew dockerBuild`
+      - `docker run fetch-receipts-service:latest`
 6. In case, for M1 users this does not work. Then, go on to run the following commands:
-      - `**./gradlew dockerBuild**`
-      - `**docker build --platform linux/amd64 -t fetch-receipts-m1-amd:latest ./build/docker/main -f ./build/docker/main/Dockerfile**`
-      - `**docker run --platform linux/amd64 fetch-receipts-m1-amd:latest**`
+      - `./gradlew dockerBuild`
+      - `docker build --platform linux/amd64 -t fetch-receipts-m1-amd:latest ./build/docker/main -f ./build/docker/main/Dockerfile`
+      - `docker run --platform linux/amd64 fetch-receipts-m1-amd:latest`
 
 The other method involves installation of Java 17: 
 
@@ -40,8 +40,8 @@ The other method involves installation of Java 17:
       - sdk install gradle 8.3. This requires installing: https://sdkman.io/
       - In case you get stuck, navigate to https://gradle.org/install/
 4. To compile and run, use the following commands:
-      - `**./gradlew compileJava**`
-      - `**./gradlew run**`
+      - `./gradlew compileJava`
+      - `./gradlew run`
 
 The application will be up on http://localhost:8081 and you would see the following screen.
 
