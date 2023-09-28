@@ -39,7 +39,7 @@ The other method involves installation of Java 17:
      - To install gradle, navigate to https://gradle.org/install/
 3. Post the successful installation, check **./gradlew -v** to check the gradle version
 4. To compile and run, use the following commands:
-      - ``` command ./gradlew compileJava```
+      - ` ./gradlew compileJava`
       - `./gradlew run`
 
 The application will be up on http://localhost:8081 and you would see the following screen.
