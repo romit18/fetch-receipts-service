@@ -1,10 +1,8 @@
 ## Fetch Receipts Service
 
-This project uses Micronaut 4.1.2, a microservice framework in Java17. There are some documentation links attached below. It makes use of a Tomcat 9.0 server.
-
 ## Requirements and setup for the project:
 
-The java jdk we are using is Amazons corretto 17. The steps for installation are given here: https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/what-is-corretto-17.html
+This project uses Micronaut 4.1.2, a microservice framework in Java v17. There are some documentation links attached below. It makes use of a Tomcat 9.0 server.
 
 There are two ways to setup the project.
 
@@ -33,21 +31,20 @@ First one involves Docker. The steps are as follows:
 
 The other method involves installation of Java 17: 
 
-1. The java jdk we are using is Amazons corretto 17. The steps for installation are given here: https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/what-is-corretto-17.html.
-2. Gradle would have been installed above already. 
-3. To install gradle on macOS, we can either use:
-      - brew install gradle
-      - sdk install gradle 8.3. This requires installing: https://sdkman.io/
-      - In case you get stuck, navigate to https://gradle.org/install/
+1. The java jdk we are using is Amazons corretto 17. Please install this version from the link below:
+   - [https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/what-is-corretto-17.html](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/macos-install.html).
+   - https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/generic-linux-install.html
+   - https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/windows-7-install.html
+2. This project is built using Gradle and requires presence of Gradle version 8+. 
+     - To install gradle, navigate to https://gradle.org/install/
+3. Post the successful installation, check **./gradlew -v** to check the gradle version
 4. To compile and run, use the following commands:
-      - `./gradlew compileJava`
+      - ``` command ./gradlew compileJava```
       - `./gradlew run`
 
 The application will be up on http://localhost:8081 and you would see the following screen.
 
 ![](startup.png)
-
-
 
 ---
 ## Summary of API Specification
