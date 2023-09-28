@@ -4,14 +4,15 @@
 
 This project uses Micronaut 4.1.2, a microservice framework in Java v17. There are some documentation links attached below. It makes use of a Tomcat 9.0 server.
 
-The java jdk we are using is Amazons corretto 17. Please install this version from the link below:
-   - [https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/what-is-corretto-17.html](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/macos-install.html).
-   - https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/generic-linux-install.html
-   - https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/windows-7-install.html
      
 There are two ways to setup the project.
 
 First one involves Docker. The steps are as follows:
+
+The java jdk we are using is Amazons corretto 17. Please install this version from the link below:
+   - [https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/what-is-corretto-17.html](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/macos-install.html).
+   - https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/generic-linux-install.html
+   - https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/windows-7-install.html
 
 1. Docker is required if we do not want to set up Java v17 and tomcat locally. 
    In order to install docker, follow the steps:
@@ -36,6 +37,10 @@ First one involves Docker. The steps are as follows:
 
 The other method involves:
 
+1.The java jdk we are using is Amazons corretto 17. Please install this version from the link below:
+   - [https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/what-is-corretto-17.html](https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/macos-install.html).
+   - https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/generic-linux-install.html
+   - https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/windows-7-install.html
 2. This project is built using Gradle and requires presence of Gradle version 8+. 
      - To install gradle, navigate to https://gradle.org/install/
 3. Post the successful installation, check **./gradlew -v** to check the gradle version
@@ -145,10 +150,10 @@ curl --header "Content-Type: application/json" \
 
 For GET: ``` /receipts/{id}/points```
 
-Replace the ID with the ID generated with the POST request:
+Replace the ID with the ID generated with the POST request.
 
 ```http request
-curl http://localhost:8081/fetch/receipts/{id}/points 
+curl http://localhost:8081/fetch/receipts/{ID}/points 
 ```
 
 
