@@ -1,4 +1,4 @@
-## Micronaut 4.1.2 Documentation
+## Fetch Receipts Service
 
 This project uses Micronaut 4.1.2, a microservice framework in Java17. There are some documentation links attached below. It makes use of a Tomcat 9.0 server.
 
