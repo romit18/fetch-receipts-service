@@ -9,14 +9,26 @@ version = "0.1"
 group = "com.fetch.service"
 
 apply from: "gradle/asciidoc.gradle"
+
 repositories {
     mavenCentral()
 }
 
+dockerfile {
+    baseImage.set("amazoncorretto:17-alpine-jdk")
+}
+
 dependencies {
+    compileOnly("org.projectlombok:lombok")
     annotationProcessor("io.micronaut.openapi:micronaut-openapi")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
     annotationProcessor("io.micronaut.validation:micronaut-validation-processor")
+    annotationProcessor("io.micronaut:micronaut-http-validation")
+    annotationProcessor("io.micronaut.micrometer:micronaut-micrometer-annotation")
+    annotationProcessor("io.micronaut.security:micronaut-security-annotations")
+    annotationProcessor("io.micronaut.data:micronaut-data-processor")
+    annotationProcessor("org.projectlombok:lombok")
+    annotationProcessor('io.micronaut:micronaut-inject-java')
     implementation("io.micronaut.cache:micronaut-cache-caffeine")
     implementation("io.micronaut.reactor:micronaut-reactor")
     implementation("io.micronaut.serde:micronaut-serde-jackson")

@@ -3,7 +3,6 @@ author@example.org
 
 Write a short introduction about your project
 
-== Build
 
 Explain what it requires and how to build the project. For example:
 

@@ -1,3 +1,13 @@
 micronaut:
   application:
     name: fetch-receipts-service
+  server:
+    port: 8081
+  executors:
+    io:
+      type: fixed
+      nThreads: 75
+
+api-config:
+  name: fetch-api
+  base-url: /fetch

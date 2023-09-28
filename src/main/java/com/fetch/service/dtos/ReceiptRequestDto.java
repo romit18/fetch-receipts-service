@@ -1,5 +1,6 @@
 package com.fetch.service.dtos;
 
+import com.fetch.exceptions.FetchServiceBadRequestException;
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
@@ -18,15 +19,15 @@ public record ReceiptRequestDto(@NotNull String retailer, @NotNull String purcha
     public boolean validateRequestAndGenerateReceipt(){
         if(!purchaseTime.matches(TIME_PATTERN)){
             //these can be customized as per use case
-            throw new RuntimeException("the valid format for time is HH:MM");
+            throw new FetchServiceBadRequestException("the valid format for time is HH:MM");
         }
 
         if(!purchaseDate.matches(DATE_PATTERN) || (purchaseDate.matches(DATE_PATTERN) && LocalDate.parse(purchaseDate).isAfter(LocalDate.now()))){
-            throw new RuntimeException("the valid format for date is YYYY-MM-DD");
+            throw new FetchServiceBadRequestException("the valid format for date is YYYY-MM-DD");
         }
 
         if(items.isEmpty()){
-            throw new RuntimeException("Items cannot be empty.");
+            throw new FetchServiceBadRequestException("Items cannot be empty.");
         }
 
         //we can add more validations like total = sum of all prices too. not reqd for the task though.

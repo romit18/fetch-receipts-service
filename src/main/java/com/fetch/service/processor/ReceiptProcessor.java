@@ -1,5 +1,6 @@
 package com.fetch.service.processor;
 
+import com.fetch.exceptions.FetchServiceBadRequestException;
 import com.fetch.service.dtos.ItemDto;
 import com.fetch.service.dtos.ReceiptDto;
 import com.fetch.service.dtos.ReceiptRequestDto;
@@ -54,7 +55,7 @@ public class ReceiptProcessor {
     public ReceiptDto getReceipt(UUID id) {
 
         if(!allReceipts.containsKey(id)){
-            throw new RuntimeException("This receipt does not exist.");
+            throw new FetchServiceBadRequestException("This receipt does not exist.");
         }
         return allReceipts.get(id);
     }
